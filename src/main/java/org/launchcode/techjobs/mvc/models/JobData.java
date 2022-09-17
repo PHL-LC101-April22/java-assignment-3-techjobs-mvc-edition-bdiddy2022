@@ -21,9 +21,12 @@ public class JobData {
 
     private static final String DATA_FILE = "job_data.csv";
     private static boolean isDataLoaded = false;
+    //checkpoint-boolean, ensures that there's data to work with before moving forwards
 
     private static ArrayList<Job> allJobs;
+    //hold collection of each job object, will work as an index/appendix
     private static ArrayList<Employer> allEmployers = new ArrayList<>();
+    //this & further array lists used as search filter for results by employer, location, etc. Note that all parameters are distinct objects
     private static ArrayList<Location> allLocations = new ArrayList<>();
     private static ArrayList<PositionType> allPositionTypes = new ArrayList<>();
     private static ArrayList<CoreCompetency> allCoreCompetency = new ArrayList<>();
